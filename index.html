@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Weblodge — Digital Agency</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #170154;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: 70px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #ff550d;
+        }
+
+        .hero p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #ddd;
+            max-width: 650px;
+            margin: 0 auto 35px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #ff550d;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: white;
+            color: #170154;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                We Build <span>Digital</span> Experiences
+            </h1>
+
+            <p>
+                Weblodge is a creative digital agency helping businesses
+                build beautiful websites, animations and digital experiences.
+            </p>
+
+            <a href="mailto:hello@weblodge.agency" class="button">
+                Let's Work Together
+            </a>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
