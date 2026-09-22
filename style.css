@@ -66,16 +66,22 @@ button {
   left: 0;
   width: 100%;
   z-index: 9999;
+
   padding: 0 20px;
+
   box-sizing: border-box;
 }
 
+
 .weblodge-header {
+  position: relative;
+
   width: 100%;
   max-width: 1400px;
-  height: 60px;
-  margin: 0 auto;
 
+  height: 60px;
+
+  margin: 0 auto;
   padding: 0 24px;
 
   display: flex;
@@ -111,6 +117,7 @@ button {
   flex-shrink: 0;
 }
 
+
 .weblodge-logo {
   position: relative;
 
@@ -125,8 +132,6 @@ button {
 }
 
 
-/* Lottie logo */
-
 .weblodge-logo .logo-animation {
   position: absolute;
 
@@ -137,14 +142,10 @@ button {
   height: 42px;
 
   display: block;
-
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease;
 }
 
 
-/* Remove focus outline */
+/* Focus */
 
 .weblodge-logo:focus,
 .weblodge-logo:active,
@@ -159,7 +160,12 @@ button {
 ===================================================== */
 
 .weblodge-header-nav {
-  width: 52%;
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
 
   display: flex;
   align-items: center;
@@ -167,8 +173,9 @@ button {
 
   gap: 32px;
 
-  flex-shrink: 0;
+  white-space: nowrap;
 }
+
 
 .weblodge-header-nav a {
   position: relative;
@@ -228,12 +235,15 @@ button {
 .weblodge-header-whatsapp {
   width: 30%;
 
+  margin-left: auto;
+
   display: flex;
   align-items: center;
   justify-content: flex-end;
 
   flex-shrink: 0;
 }
+
 
 .whatsapp-link {
   display: flex;
@@ -257,8 +267,10 @@ button {
 }
 
 
+.whatsapp-link:hover {
+  color: #ff550d;
+}
 
-/* WhatsApp Lottie */
 
 .whatsapp-animation {
   width: 42px;
@@ -283,6 +295,7 @@ button {
   padding: 0;
 
   border: none;
+
   background: transparent;
 
   color: #ffffff;
@@ -321,12 +334,18 @@ button {
   }
 
 
-  /* LEFT — LOGO */
+  /* -----------------------------------------------
+     LOGO — LEFT
+  ------------------------------------------------ */
 
   .weblodge-header-logo {
-    width: 33.33%;
+    width: auto;
 
+    display: flex;
+    align-items: center;
     justify-content: flex-start;
+
+    flex: 0 0 auto;
   }
 
 
@@ -342,28 +361,50 @@ button {
   }
 
 
-  /* MIDDLE — HAMBURGER */
+  /* -----------------------------------------------
+     DESKTOP MENU — HIDDEN
+  ------------------------------------------------ */
 
   .weblodge-header-nav {
     display: none;
   }
 
 
+  /* -----------------------------------------------
+     HAMBURGER — TRUE CENTER
+  ------------------------------------------------ */
+
   .weblodge-mobile-toggle {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
     display: flex;
 
-    width: 33.33%;
+    width: 40px;
+    height: 40px;
+
+    align-items: center;
+    justify-content: center;
   }
 
 
-  /* RIGHT — WHATSAPP */
+  /* -----------------------------------------------
+     WHATSAPP — RIGHT
+  ------------------------------------------------ */
 
   .weblodge-header-whatsapp {
-    width: 33.33%;
+    width: auto;
 
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
     justify-content: flex-end;
-
-    margin: 0;
   }
 
 
@@ -389,6 +430,7 @@ button {
 
   .site-header {
     top: 12px;
+
     padding: 0 10px;
   }
 
@@ -402,12 +444,14 @@ button {
   }
 
 
-  /* LEFT — LOGO */
+  /* -----------------------------------------------
+     LOGO — LEFT
+  ------------------------------------------------ */
 
   .weblodge-header-logo {
-    width: 33.33%;
+    width: auto;
 
-    justify-content: flex-start;
+    flex: 0 0 auto;
   }
 
 
@@ -423,19 +467,29 @@ button {
   }
 
 
-  /* MIDDLE — HAMBURGER */
+  /* -----------------------------------------------
+     HAMBURGER — TRUE CENTER
+  ------------------------------------------------ */
 
   .weblodge-mobile-toggle {
-    width: 33.33%;
+    left: 50%;
+    top: 50%;
+
+    width: 36px;
+    height: 36px;
 
     font-size: 23px;
   }
 
 
-  /* RIGHT — WHATSAPP */
+  /* -----------------------------------------------
+     WHATSAPP — RIGHT
+  ------------------------------------------------ */
 
   .weblodge-header-whatsapp {
-    width: 33.33%;
+    width: auto;
+
+    margin-left: auto;
 
     justify-content: flex-end;
   }
