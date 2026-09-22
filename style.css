@@ -112,23 +112,63 @@ button {
 }
 
 .weblodge-logo {
+  position: relative;
+
   width: 200px;
   height: 42px;
 
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  display: block;
 
   text-decoration: none;
 
   outline: none;
 }
 
-.weblodge-logo lottie-player {
+
+/* Both logo animations occupy the exact same space */
+
+.weblodge-logo .logo-animation {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
   width: 200px;
   height: 42px;
 
   display: block;
+
+  transition: opacity 0.3s ease;
+}
+
+
+/* Normal logo */
+
+.weblodge-logo .logo-default {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* Hover logo */
+
+.weblodge-logo .logo-hover {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+/* Switch animation on hover */
+
+.weblodge-logo:hover .logo-default {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+.weblodge-logo:hover .logo-hover {
+  opacity: 1;
+  visibility: visible;
 }
 
 
