@@ -78,8 +78,6 @@ button {
 
   padding: 0 24px;
 
-  box-sizing: border-box;
-
   display: flex;
   align-items: center;
 
@@ -94,6 +92,8 @@ button {
 
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
+
+  box-sizing: border-box;
 }
 
 
@@ -125,13 +125,55 @@ button {
 }
 
 
+/* Lottie logo */
+
+.weblodge-logo .logo-animation {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 200px;
+  height: 42px;
+
+  display: block;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+
+/* Default logo */
+
+.weblodge-logo .logo-default {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* Hover logo */
+
+.weblodge-logo .logo-hover {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+/* Hover switch */
+
+.weblodge-logo:hover .logo-default {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .weblodge-logo:hover .logo-hover {
   opacity: 1;
   visibility: visible;
 }
 
 
-/* Remove browser focus outline */
+/* Remove focus outline */
 
 .weblodge-logo:focus,
 .weblodge-logo:active,
@@ -173,9 +215,7 @@ button {
 
   white-space: nowrap;
 
-  transition:
-    color 0.3s ease,
-    transform 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 
@@ -215,11 +255,11 @@ button {
 ===================================================== */
 
 .weblodge-header-whatsapp {
-  width: 18%;
+  width: 30%;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 
   flex-shrink: 0;
 }
@@ -227,6 +267,8 @@ button {
 .whatsapp-link {
   display: flex;
   align-items: center;
+  justify-content: center;
+
   gap: 8px;
 
   color: #ffffff;
@@ -238,12 +280,21 @@ button {
 
   text-decoration: none;
 
+  white-space: nowrap;
+
   transition: color 0.3s ease;
 }
 
+.whatsapp-link:hover {
+  color: #ff550d;
+}
+
+
+/* WhatsApp Lottie */
+
 .whatsapp-animation {
   width: 42px;
-  height: auto;
+  height: 42px;
 
   display: block;
 
@@ -251,17 +302,15 @@ button {
 }
 
 
-
-
 /* =====================================================
-   MOBILE TOGGLE
+   HAMBURGER
 ===================================================== */
 
 .weblodge-mobile-toggle {
   display: none;
 
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
 
   padding: 0;
 
@@ -270,55 +319,111 @@ button {
 
   color: #ffffff;
 
-  font-size: 24px;
+  font-size: 25px;
+  line-height: 1;
 
   cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
 }
 
 
 /* =====================================================
    TABLET
+   1024px AND BELOW
 ===================================================== */
 
 @media (max-width: 1024px) {
 
+  .site-header {
+    top: 15px;
+    padding: 0 15px;
+  }
+
+
   .weblodge-header {
     height: 55px;
+
     padding: 0 18px;
+
+    border-radius: 28px;
   }
+
+
+  /* LEFT — LOGO */
 
   .weblodge-header-logo {
-    width: 25%;
+    width: 33.33%;
+
+    justify-content: flex-start;
   }
+
+
+  .weblodge-logo {
+    width: 180px;
+    height: 40px;
+  }
+
+
+  .weblodge-logo .logo-animation {
+    width: 180px;
+    height: 40px;
+  }
+
+
+  /* MIDDLE — HAMBURGER */
 
   .weblodge-header-nav {
-    width: 50%;
-    gap: 20px;
-  }
-
-  .weblodge-header-whatsapp {
-    width: 25%;
-  }
-
-  .weblodge-header-action {
     display: none;
   }
 
- 
+
+  .weblodge-mobile-toggle {
+    display: flex;
+
+    width: 33.33%;
+  }
+
+
+  /* RIGHT — WHATSAPP */
+
+  .weblodge-header-whatsapp {
+    width: 33.33%;
+
+    justify-content: flex-end;
+
+    margin: 0;
+  }
+
+
+  .whatsapp-animation {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .whatsapp-text {
+    display: inline;
+  }
 
 }
 
 
 /* =====================================================
    MOBILE
+   767px AND BELOW
 ===================================================== */
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
 
   .site-header {
     top: 12px;
     padding: 0 10px;
   }
+
 
   .weblodge-header {
     height: 52px;
@@ -328,51 +433,56 @@ button {
     border-radius: 26px;
   }
 
-  .weblodge-header-logo {
-    width: auto;
 
-    flex: 1;
+  /* LEFT — LOGO */
+
+  .weblodge-header-logo {
+    width: 33.33%;
+
+    justify-content: flex-start;
   }
 
+
   .weblodge-logo {
-  width: 145px;
-  height: 40px;
-}
-
-
-  .weblodge-logo lottie-player {
     width: 145px;
     height: 40px;
   }
 
-  .weblodge-header-nav {
-    display: none;
+
+  .weblodge-logo .logo-animation {
+    width: 145px;
+    height: 40px;
   }
+
+
+  /* MIDDLE — HAMBURGER */
+
+  .weblodge-mobile-toggle {
+    width: 33.33%;
+
+    font-size: 23px;
+  }
+
+
+  /* RIGHT — WHATSAPP */
 
   .weblodge-header-whatsapp {
-    width: auto;
+    width: 33.33%;
 
-    margin-right: 8px;
+    justify-content: flex-end;
   }
+
+
+  /* Hide phone number */
 
   .whatsapp-text {
     display: none;
   }
 
+
   .whatsapp-animation {
-  width: 32px;
-  height: 32px;
-}
-
-  .weblodge-header-action {
-    display: none;
-  }
-
-  .weblodge-mobile-toggle {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
+    width: 34px;
+    height: 34px;
   }
 
 }
