@@ -853,3 +853,14 @@ button {
   }
 
 }
+.lottie-logo {
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.lottie-logo lottie-player {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
