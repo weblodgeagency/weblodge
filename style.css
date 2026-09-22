@@ -428,17 +428,24 @@ button {
 
 @media (max-width: 767px) {
 
+  .container {
+    width: calc(100% - 30px);
+  }
+
   .site-header {
     padding: 0 10px;
   }
 
+  .header-inner {
+    height: 48px;
+  }
 
-  .weblodge-header {
-    height: 52px;
+  .nav {
+    display: none;
+  }
 
-    padding: 0 10px;
-
-    border-radius: 26px;
+  .menu-toggle {
+    display: block;
   }
 
 
