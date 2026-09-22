@@ -85,7 +85,7 @@ button {
 ========================================= */
 
 .logo {
-  width: 100px;
+  width: 200px;
   height: auto;
 
   display: flex;
@@ -96,7 +96,7 @@ button {
 }
 
 .logo lottie-player {
-  width: 100px;
+  width: 200px;
   height: auto;
   display: block;
 }
