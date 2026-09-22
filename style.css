@@ -242,22 +242,14 @@ button {
 }
 
 .whatsapp-animation {
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: auto;
 
   display: block;
 
   flex-shrink: 0;
 }
 
-.whatsapp-link:hover {
-  color: #ff550d;
-}
-
-.whatsapp-link:hover .whatsapp-icon {
-  background: #ff550d;
-  border-color: #ff550d;
-}
 
 
 /* =====================================================
@@ -419,10 +411,10 @@ button {
     display: none;
   }
 
-  .whatsapp-icon {
-    width: 32px;
-    height: 32px;
-  }
+  .whatsapp-animation {
+  width: 32px;
+  height: 32px;
+}
 
   .weblodge-header-action {
     display: none;
