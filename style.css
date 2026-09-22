@@ -80,26 +80,25 @@ button {
   justify-content: space-between;
 }
 
+/* =========================================
+   HEADER LOGO — LOTTIE
+========================================= */
+
 .logo {
-  display: inline-flex;
+  width: 170px;
+  height: 48px;
+
+  display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 21px;
-  font-weight: 800;
-  letter-spacing: -0.6px;
+
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
-.logo-mark {
-  width: 37px;
-  height: 37px;
-  display: grid;
-  place-items: center;
-  border-radius: 11px;
-  background: var(--orange);
-  color: white;
-  font-size: 17px;
-  font-weight: 900;
-  box-shadow: 0 8px 25px rgba(255, 85, 13, 0.22);
+.logo lottie-player {
+  width: 170px;
+  height: 48px;
+  display: block;
 }
 
 .nav {
