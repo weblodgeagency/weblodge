@@ -56,83 +56,395 @@ button {
 }
 
 
-/* =========================================
-   HEADER
-========================================= */
+/* =====================================================
+   WEBLODGE HEADER
+===================================================== */
 
 .site-header {
   position: fixed;
-  z-index: 1000;
-  top: 0;
+  top: 20px;
   left: 0;
   width: 100%;
-  padding: 18px 0;
-  background: rgba(23, 1, 84, 0.72);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 9999;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.weblodge-header {
+  width: 100%;
+  max-width: 1400px;
+  height: 60px;
+  margin: 0 auto;
+
+  padding: 0 24px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  background: #170154;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.20),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
 
-.header-inner {
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
-/* =========================================
-   HEADER LOGO — LOTTIE
-========================================= */
+/* =====================================================
+   LOGO
+===================================================== */
 
-.logo {
-  width: 200px;
-  height: auto;
+.weblodge-header-logo {
+  width: 18%;
 
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 
-  text-decoration: none;
   flex-shrink: 0;
 }
 
-.logo lottie-player {
+.weblodge-logo {
   width: 200px;
-  height: auto;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  text-decoration: none;
+
+  outline: none;
+}
+
+.weblodge-logo lottie-player {
+  width: 200px;
+  height: 42px;
+
   display: block;
 }
 
-.nav {
+
+/* Remove browser focus outline */
+
+.weblodge-logo:focus,
+.weblodge-logo:active,
+.weblodge-logo:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* =====================================================
+   DESKTOP NAVIGATION
+===================================================== */
+
+.weblodge-header-nav {
+  width: 52%;
+
   display: flex;
   align-items: center;
-  gap: 31px;
+  justify-content: center;
+
+  gap: 32px;
+
+  flex-shrink: 0;
 }
 
-.nav a {
-  color: #d8d3e5;
+.weblodge-header-nav a {
+  position: relative;
+
+  color: #ffffff;
+
+  font-family: 'Plus Jakarta Sans', sans-serif;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* Orange underline */
+
+.weblodge-header-nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -8px;
+
+  width: 0;
+  height: 1.5px;
+
+  background: #ff550d;
+
+  transform: translateX(-50%);
+
+  transition: width 0.3s ease;
+}
+
+
+.weblodge-header-nav a:hover {
+  color: #ff550d;
+}
+
+
+.weblodge-header-nav a:hover::after {
+  width: 100%;
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.weblodge-header-whatsapp {
+  width: 18%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.whatsapp-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #ffffff;
+
+  font-family: 'Plus Jakarta Sans', sans-serif;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.whatsapp-icon {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  font-size: 12px;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.whatsapp-link:hover {
+  color: #ff550d;
+}
+
+.whatsapp-link:hover .whatsapp-icon {
+  background: #ff550d;
+  border-color: #ff550d;
+}
+
+
+/* =====================================================
+   LET'S TALK BUTTON
+===================================================== */
+
+.weblodge-header-action {
+  width: 12%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  flex-shrink: 0;
+}
+
+.weblodge-header-button {
+  height: 40px;
+
+  padding: 0 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ff550d;
+  color: #ffffff;
+
+  border-radius: 20px;
+
+  font-family: 'Plus Jakarta Sans', sans-serif;
+
   font-size: 13px;
-  font-weight: 500;
-  transition: color 0.25s ease;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
-.nav a:hover {
-  color: var(--white);
+.weblodge-header-button:hover {
+  background: #ffffff;
+  color: #170154;
+
+  transform: translateY(-1px);
 }
 
-.nav .header-button {
-  padding: 11px 19px;
-  border-radius: 30px;
-  background: var(--orange);
-  color: white;
-  font-weight: 700;
-}
 
-.menu-toggle {
+/* =====================================================
+   MOBILE TOGGLE
+===================================================== */
+
+.weblodge-mobile-toggle {
   display: none;
-  border: 0;
+
+  width: 36px;
+  height: 36px;
+
+  padding: 0;
+
+  border: none;
   background: transparent;
-  color: white;
-  font-size: 27px;
+
+  color: #ffffff;
+
+  font-size: 24px;
+
   cursor: pointer;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1024px) {
+
+  .weblodge-header {
+    height: 55px;
+    padding: 0 18px;
+  }
+
+  .weblodge-header-logo {
+    width: 25%;
+  }
+
+  .weblodge-header-nav {
+    width: 50%;
+    gap: 20px;
+  }
+
+  .weblodge-header-whatsapp {
+    width: 25%;
+  }
+
+  .weblodge-header-action {
+    display: none;
+  }
+
+  .weblodge-header-button {
+    display: none;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .site-header {
+    top: 12px;
+    padding: 0 10px;
+  }
+
+  .weblodge-header {
+    height: 52px;
+
+    padding: 0 10px;
+
+    border-radius: 26px;
+  }
+
+  .weblodge-header-logo {
+    width: auto;
+
+    flex: 1;
+  }
+
+  .weblodge-logo {
+    width: 145px;
+    height: 40px;
+  }
+
+  .weblodge-logo lottie-player {
+    width: 145px;
+    height: 40px;
+  }
+
+  .weblodge-header-nav {
+    display: none;
+  }
+
+  .weblodge-header-whatsapp {
+    width: auto;
+
+    margin-right: 8px;
+  }
+
+  .whatsapp-text {
+    display: none;
+  }
+
+  .whatsapp-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .weblodge-header-action {
+    display: none;
+  }
+
+  .weblodge-mobile-toggle {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+
 }
 
 
