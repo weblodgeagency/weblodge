@@ -252,56 +252,6 @@ button {
 
 
 
-/* =====================================================
-   LET'S TALK BUTTON
-===================================================== */
-
-.weblodge-header-action {
-  width: 12%;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  flex-shrink: 0;
-}
-
-.weblodge-header-button {
-  height: 40px;
-
-  padding: 0 18px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #ff550d;
-  color: #ffffff;
-
-  border-radius: 20px;
-
-  font-family: 'Plus Jakarta Sans', sans-serif;
-
-  font-size: 13px;
-  font-weight: 600;
-
-  text-decoration: none;
-
-  white-space: nowrap;
-
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.weblodge-header-button:hover {
-  background: #ffffff;
-  color: #170154;
-
-  transform: translateY(-1px);
-}
-
 
 /* =====================================================
    MOBILE TOGGLE
@@ -354,9 +304,7 @@ button {
     display: none;
   }
 
-  .weblodge-header-button {
-    display: none;
-  }
+ 
 
 }
 
