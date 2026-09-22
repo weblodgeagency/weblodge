@@ -429,8 +429,6 @@ button {
 @media (max-width: 767px) {
 
   .site-header {
-    top: 12px;
-
     padding: 0 10px;
   }
 
