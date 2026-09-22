@@ -446,9 +446,14 @@ button {
   }
 
   .weblodge-logo {
-    width: 145px;
-    height: 40px;
-  }
+  width: 145px;
+  height: 40px;
+}
+
+.weblodge-logo .logo-animation {
+  width: 145px;
+  height: 40px;
+}
 
   .weblodge-logo lottie-player {
     width: 145px;
