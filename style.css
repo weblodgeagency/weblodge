@@ -144,35 +144,6 @@ button {
 }
 
 
-/* Default logo */
-
-.weblodge-logo .logo-default {
-  opacity: 1;
-  visibility: visible;
-}
-
-
-/* Hover logo */
-
-.weblodge-logo .logo-hover {
-  opacity: 0;
-  visibility: hidden;
-}
-
-
-/* Hover switch */
-
-.weblodge-logo:hover .logo-default {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.weblodge-logo:hover .logo-hover {
-  opacity: 1;
-  visibility: visible;
-}
-
-
 /* Remove focus outline */
 
 .weblodge-logo:focus,
